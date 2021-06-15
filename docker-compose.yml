@@ -1,0 +1,20 @@
+version: '3.9' # optional since v1.27.0
+services:
+  docker-frontend:
+    build:
+      context: angular-crash-2021
+      dockerfile: Dockerfile.dev
+    ports:
+      - '4200:4200'
+    volumes:
+      - ./angular-crash-2021/src:/frontend/src
+
+  docker-backend:
+    build:
+      context: json-server
+      dockerfile: Dockerfile
+    ports:
+      - '5000:5000'
+    volumes:
+      - ./json-server:/backend
+      
