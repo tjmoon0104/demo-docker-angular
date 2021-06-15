@@ -1,0 +1,16 @@
+version: '3.9' # optional since v1.27.0
+services:
+  nginx-frontend:
+    build:
+      context: angular-crash-2021
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'
+
+  json-backend:
+    build:
+      context: json-server
+      dockerfile: Dockerfile
+    volumes:
+      - ./json-server:/backend
+      
