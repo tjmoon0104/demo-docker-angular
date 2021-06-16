@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "gh-build": "ng build --configuration github --base-href /demo-docker-angular/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
